@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Flask App" />
+    <meta name="Description" content="Enter your description here" />
+    <link rel="icon" type="image/x-icon" href=  "{{ url_for('static', filename='connexion_internet_15639.ico') }}"  >
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -18,20 +19,15 @@
 <body class="d-flex flex-column min-vh-100">
     <div class="container-fluid" id="home">
         <div class="row">
-            <nav class="navbar navbar-light bg-success text-white">
-                <div class="container-fluid">
-                    <a class="navbar-brand text-warning" href="./index.html">
-                        <img src="{{ url_for('static', filename='Web_22320.png') }}" alt="logo" height="80"
-                            class="d-inline-block align-text-top" />
-                    </a>
-                    <h1 class="mx-auto" style="font-family: 'Audiowide', sans-serif">
-                        <a href="./index.html"> </a>Searcher<strong>X</strong>
-                        <i class="fab fa-affiliatetheme spinner-border"></i>
-                    </h1>
-                    <img src="{{ url_for('static', filename='Web_22320.png') }}" alt="logo" height="80"
-                        class="d-inline-block align-text-top" />
+            <!-- Bootstrap Static Header -->
+            <div style="background: url(https://bootstrapious.com/i/snippets/sn-static-header/background.jpg)"
+                class="jumbotron bg-cover text-white">
+                <div class="container py-2 text-center">
+                    <h1 class="display-1 font-weight-bold">Searcher<strong>X   <i class="fab fa-affiliatetheme text-warning"></i></strong></h1>
+                    <p class="font-italic mb-0 text-white-50">Search the web in a different way</p>
+                   
                 </div>
-            </nav>
+            </div>
 
             <div>
                 <form action="/" method="post">
@@ -43,9 +39,9 @@
                             placeholder="Enter the search keyword " name="pswd" required />
                     </div>
 
-                    <div class="d-grid gap-2">
+                    <div class="d-grid gap-2 container">
                         <button type="submit" class="btn btn-md btn-primary mt-2" id="btn1">
-                            <strong>Submit <i class="fas fa-external-link-square-alt"></i></strong>
+                            <strong>Search <i class="fas fa-external-link-square-alt"></i></strong>
                         </button>
                     </div>
                     <hr />
@@ -93,6 +89,11 @@
                 <footer class="fixed-bottom text-center bg-secondary">
                      <a href="https://github.com/LpCodes" class="text-white" target="_blank">© Created By LpCodes</a>
                 </footer>
+                <footer class="py-2 bg-dark flex-shrink-0 fixed-bottom">
+                    <div class="container text-center">
+                      <a href="https://github.com/LpCodes" class="text-white-50">© Created By LpCodes</a>
+                    </div>
+                  </footer>
             </div>
         </div>
     </div>
