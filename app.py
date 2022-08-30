@@ -34,22 +34,20 @@ def finder_x(keyword):
 
 @app.route("/", methods=["GET", "POST"])
 def hello_world():
-    # return render_template("index.html")
-    if request.method == "POST":
-        userinput = request.form.get("pswd")
-        heading, links, info = finder_x(f"{userinput}")
-        userinput = userinput.capitalize()
-
-        return render_template(
-            "index.html",
-            si=userinput,
-            lol=zip(heading, links, info),
-            sz=list(zip(heading, links, info)),
-        )
-    else:
+    if request.method != "POST":
         return render_template("index.html")
+    userinput = request.form.get("pswd")
+    heading, links, info = finder_x(f"{userinput}")
+    userinput = userinput.capitalize()
+
+    return render_template(
+        "index.html",
+        si=userinput,
+        lol=zip(heading, links, info),
+        sz=list(zip(heading, links, info)),
+    )
 
 
-# main driver function
-# if __name__ == "__main__":
-#     app.run(debug=True)
+main driver function
+if __name__ == "__main__":
+    app.run()
