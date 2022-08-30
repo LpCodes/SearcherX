@@ -48,6 +48,6 @@ def hello_world():
     )
 
 
-main driver function
+# main driver function
 if __name__ == "__main__":
     app.run()
